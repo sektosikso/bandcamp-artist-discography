@@ -23,7 +23,7 @@ function cmp($a, $b)
   */
 function getDiscography($bandid = BAND_ID)
 {
-  if (!$json = @file_get_contents('http://api.bandcamp.com/api/band/3/discography?key='.API_KEY.'&band_id='.BAND_ID.'&debug'))
+  if (!$json = @file_get_contents('http://api.bandcamp.com/api/band/3/discography?key='.API_KEY.'&band_id='.$bandid.'&debug'))
     die('could not connect to bandcamp API');
 
   $obj = json_decode($json);
